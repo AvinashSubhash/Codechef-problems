@@ -3,7 +3,7 @@
 #define endl "\n"
 using namespace std;
 
-void solve()
+void solution()
 {
     //Solving area
 }
@@ -16,6 +16,6 @@ int main()
     cin>>t;
     while(t--)
     {
-        solve();
+        solution();
     }
 }
