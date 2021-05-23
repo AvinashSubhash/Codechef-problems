@@ -14,7 +14,7 @@ int value(int1 v1, int1 v2)
     {
         num += v1;
         v1 += 1;
-    }
+    } 
     return num;
 }
 
