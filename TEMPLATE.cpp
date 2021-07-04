@@ -8,6 +8,8 @@ void solution()
     //Solving area
 }
 
+// for(auto x:array) cout<<x;
+// vector<int> num(5,0); ==> [0,0,0,0,0]
 
 int main()
 {

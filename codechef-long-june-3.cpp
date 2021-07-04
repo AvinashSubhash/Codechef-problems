@@ -6,7 +6,8 @@ using namespace std;
 void solution()
 {
     //Solving area
-    cout<<(5&5);
+    for (int i=0;i<20;i++)
+    cout<<i<<":"<<(5&i)<<endl;
 }
 
 
