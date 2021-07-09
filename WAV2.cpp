@@ -6,17 +6,44 @@ using namespace std;
 void solution()
 {
     //Solving area
-    int1 n,q;
-    cin>>n>>q;  
+    int1 n,q,k;
+    cin>>n>>q;
+    int1 num[n];
+    for(int i=0;i<n;i++)
+    cin>>num[i];
+    sort(num,num+n);
+    bool start = (n&1)?0:1;
+    while(q--)
+    {
+        cin >>k;
+        auto num1 = lower_bound(num,num+n,q) - num;
+        if (num[num1] == k)
+        cout<<0<<endl;
+        else
+        {
+            if (start)
+            {
+                if (num1 & 1)
+                cout<<"POSITIVE"<<endl;
+                else
+                cout<<"NEGATIVE"<<endl;
+            }
+            else
+            {
+                if (num1 & 1)
+                cout<<"NEGATIVE"<<endl;
+                else
+                cout<<"POSITIVE"<<endl;
+            }
+        }
+    }
+    /*
+    for(int i=0;i<10;i++)
+    cout<<i<<" & "<<1<<": "<<(i&1)<<endl;
+*/
+
 }
 
-// for(auto x:array) cout<<x;
-// vector<int> num(5,0); ==> [0,0,0,0,0]
-// memset(data,-1,sizeof(data));
-// sort(array1,array1+n);
-
-//debug time
-// begin=clock(); end=clock(); cout<<(double)(end-begin)/CLOCKS_PER_SEC;
 int main()
 {
     ios_base::sync_with_stdio(0);
