@@ -16,32 +16,27 @@ void solution()
     while(q--)
     {
         cin >>k;
-        auto num1 = lower_bound(num,num+n,q) - num;
+        auto num1 = lower_bound(num,num+n,k) - num;
         if (num[num1] == k)
-        cout<<0<<endl;
+            cout<<0<<endl;
         else
         {
             if (start)
             {
                 if (num1 & 1)
-                cout<<"POSITIVE"<<endl;
-                else
                 cout<<"NEGATIVE"<<endl;
+                else
+                cout<<"POSITIVE"<<endl;
             }
             else
             {
                 if (num1 & 1)
-                cout<<"NEGATIVE"<<endl;
-                else
                 cout<<"POSITIVE"<<endl;
+                else
+                cout<<"NEGATIVE"<<endl;
             }
         }
     }
-    /*
-    for(int i=0;i<10;i++)
-    cout<<i<<" & "<<1<<": "<<(i&1)<<endl;
-*/
-
 }
 
 int main()
