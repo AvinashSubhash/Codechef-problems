@@ -1,28 +1,24 @@
 #include<bits/stdc++.h>
-#define int1 long long int
-#define endl "\n"
 using namespace std;
 
-void solution()
-{
-    //Solving area
-    
-}
+int main(){
+    int n;
+    scanf("%d",&n);
+    pair <int,int> a[n];
 
-// for(auto x:array) cout<<x;
-// vector<int> num(5,0); ==> [0,0,0,0,0]
-// memset(data,-1,sizeof(data));
-// sort(array1,array1+n);
+    for(int i=0;i<n;++i)
+        scanf("%d %d", &a[i].first, &a[i].second);
 
-//debug time
-// begin=clock(); end=clock(); cout<<(double)(end-begin)/CLOCKS_PER_SEC;
-int main()
-{
-    ios_base::sync_with_stdio(0);
-    int1 t;
-    cin>>t;
-    while(t--)
-    {
-        solution();
+    sort(a,a+n); 
+    int best = -1;
+    for(int i=0;i<n;++i){
+        if (a[i].second >= best){
+            best = a[i].second;
+        }
+        else{
+            best = a[i].first;
+        }  
     }
+
+    printf("%d", best);
 }
