@@ -6,11 +6,23 @@ using namespace std;
 void solution()
 {
     //Solving area
-    int a,b,x;
-    cin >>a>>b>>x;
-    if (b-a < 0)
-    cout<<0<<endl;
-    cout<<(b-a)/x<<endl;
+    int1 n;
+    cin >> n;
+    vector<int1> num_(n,0); 
+    vector<int1> even;
+    vector<int1> odd;
+    for (int1 i=0;i<n;i++)
+    {
+        cin>>num_[i];
+        if (num_[i] & 1)
+        odd.push_back(i);
+        else
+        even.push_back(i);
+    }
+    for(int1 i=0;i<even.size();i++)
+        cout<<num_[even[i]]<<" ";
+    for(int1 i=0;i<odd.size();i++)
+        cout<<num_[odd[i]]<<" ";
 }
 
 int main()

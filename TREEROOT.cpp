@@ -18,13 +18,6 @@ void solution()
 
 }
 
-// for(auto x:array) cout<<x;
-// vector<int> num(5,0); ==> [0,0,0,0,0]
-// memset(data,-1,sizeof(data));
-// sort(array1,array1+n);
-
-//debug time
-// begin=clock(); end=clock(); cout<<(double)(end-begin)/CLOCKS_PER_SEC;
 int main()
 {
     ios_base::sync_with_stdio(0);
