@@ -12,7 +12,7 @@ void solution()
 // vector<int> num(5,0); ==> [0,0,0,0,0]
 // memset(data,-1,sizeof(data));
 // sort(array1,array1+n);
-
+// map<int,int> data; data[t]++;
 //debug time
 // begin=clock(); end=clock(); cout<<(double)(end-begin)/CLOCKS_PER_SEC;
 int main()
