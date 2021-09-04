@@ -16,7 +16,6 @@ void solution()
             cout<<!outp;
         }
     cout<<endl;
-    cout<<(int)('0'-'0');
 }
 
 int main()
