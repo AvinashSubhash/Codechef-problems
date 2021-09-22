@@ -8,16 +8,14 @@ void solution()
     //Solving area
     int1 n,count=0;
     cin >> n;
-    for(int1 i=0;i<=pow(2,n)-1;i++)
+    if (n==1)
     {
-        //cout <<(i^(i+1)) << ":" <<((i+2)^(i+3))<<endl;
-        if ((i^(i+1)) == ((i+2)^(i+3)))
-        {
-            count++;
-            //cout<<"#"<<endl;
-        }
-            }
-    cout<<count<<endl;
+        cout<<1<<endl;
+        return;
+    }
+    int1 res = pow(2,n-1);
+    cout<<res%(100000000+7)<<endl;
+    //cout<<count<<endl;
     
 }
 
