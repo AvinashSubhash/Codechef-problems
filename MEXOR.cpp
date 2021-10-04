@@ -6,22 +6,34 @@ using namespace std;
 void solution()
 {
     //Solving area
-    int1 n,k=0,s=0,i=0;
+    int1 n,output=0;
     cin>>n;
-    if( n==0)
+    /*
+    for(int x=0;x<n;x++)
     {
-        cout<<0<<endl;
+        output=0;
+        for(int1 i=0;i<x;i++)
+        output = output | i;
+        cout<<output<<endl;
+    }*/
+    if (n==0 || n==1)
+    {
+        cout<<n+1<<endl;
         return;
     }
-    while(n >= k)
+    else if (n==2)
     {
-        //cout<<"((("<<i<<"|"<<i+1<<")|"<<1<<")|"<<i+3<<"):  "<<(((i|(i+1))|(i+2))|(i+3))<<endl;
-        s=k;
-        k = k|i;
-        //cout<<k<<endl;
-        i++;
+        cout<<2<<endl;
+        return;
     }
-    cout<<s+1<<endl;
+    int pex=0;
+    while (true)
+    {
+        if (2*pex+1 > n)
+        break;
+        pex = 2*pex+1;
+    }
+    cout<<pex+1<<endl;    
 }
 
 // for(auto x:array) cout<<x;
