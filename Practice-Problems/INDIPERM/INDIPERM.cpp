@@ -5,31 +5,13 @@ using namespace std;
 
 void solution()
 {
-    //Solving area
     int n;
     cin>>n;
-    int data[n][n];
-    memset(data,1,sizeof(data));
-    if (n==2)
-    {
-        cout<<-1<<" "<<-1<<endl;
-        cout<<-1<<" "<<-1<<endl;
-    }
-    else
-    {
-        for (int i=0;i<n;i++)
-        {
-            for(int j=0;j<n;j++)
-            {
-                if (i==j)
-                cout<<-1<<" ";
-                else
-                cout<<1<<" ";
-            }
-            cout<<endl;
-        }
-    }
-    
+    for (int i=2;i<=n;i++)
+        cout<<i<<" ";
+    cout<<1<<endl;
+
+    //Solving area
 }
 
 // for(auto x:array) cout<<x;
