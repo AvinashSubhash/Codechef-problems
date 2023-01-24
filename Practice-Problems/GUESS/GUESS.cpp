@@ -5,14 +5,12 @@ using namespace std;
 
 void solution()
 {
-    //Solving area
-    int1 u,v,a,s;
-    cin>>u>>v>>a>>s;
-    if((u*u)-(2*a*s) <= (v*v))
-    cout<<"Yes"<<endl;
-    else
-    cout<<"No"<<endl;
-    
+    int1 n,m,result=0;
+    cin>>n>>m;
+    result=(n/2)*((m+1)/2) + (m/2)*((n+1)/2);
+    int1 total = n*m;
+    //cout<<result<<" "<<total<<endl;
+    cout<<(result/__gcd(result,total))<<"/"<<(total/__gcd(result,total))<<endl;  
 }
 
 // for(auto x:array) cout<<x;
